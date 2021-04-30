@@ -3,7 +3,7 @@ package com.penguin.java.datatype;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-public class Pdouble {
+public class PDouble {
     public static void main(String[] args){
         Double d1 = 3.2;
         Double d2 = 1.1;

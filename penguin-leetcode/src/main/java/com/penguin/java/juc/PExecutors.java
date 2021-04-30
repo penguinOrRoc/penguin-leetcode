@@ -3,7 +3,7 @@ package com.penguin.java.juc;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class ThreadPool {
+public class PExecutors {
     public static void main(String[] args){
         /**
          * JAVA线程池

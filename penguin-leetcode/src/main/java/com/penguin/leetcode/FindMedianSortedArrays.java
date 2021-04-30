@@ -69,16 +69,25 @@ public class FindMedianSortedArrays {
          * 如合计3个元素[0,1,2],需要排序后的1即可，目标下标为 1 ，目标值为1
          */
         if( (l1 + l2) % 2 == 0 ){
-            int targetIndex1 =  (l1 + l2) / 2 - 1;
-            int targetIndex2 =  (l1 + l2) / 2 ;
-            int targetValue1 = 0;
-            int targetValue2 = 0;
+            int targetIndexSmall =  (l1 + l2) / 2 - 1;
+            int targetIndexBig =  (l1 + l2) / 2 ;
+            int targetValueSmall = nums2[0] > nums1[0] ? nums1[0] : nums2[0];
+            int targetValueBig = nums2[0] < nums1[0] ? nums1[0] : nums2[0];
             int index = 0 ;
             //4.要考虑其中一个数组遍历完的情况 ×
-            for(int i = 0; i <  l1 ; i ++){
+            for(int i = 1; i <  l1 ; i ++){
                 index ++ ;
-                for(int j = 0; j < l2 ; j++){
+                for(int j = 1; j < l2 ; j++){
                     //比较nums2[j]<nums2[j+1]、nums1[i]的大小
+                    //针对六种情况作出处理
+                    /**
+                     * 1. a0 < a1 < b0 < b1
+                     * 2. b0 < b1 < a0 < a1
+                     * 3. a0 < a1
+                     * 4. a0 < a1 < b0 < b1
+                     * 5. a0 < a1 < b0 < b1
+                     * 6. a0 < a1 < b0 < b1
+                     */
 
 
                     index ++;
